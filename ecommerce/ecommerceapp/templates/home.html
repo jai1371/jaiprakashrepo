@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container col-lg-10"  style="position:absolute; top:100px">
+  <div class="col-lg-6 mx-auto">
+      <form style="border:2px solid black ; padding: 20px;margin: 20px;" method="POST" >
+        {% csrf_token %}
+
+
+
+      <div class="mb-3" >
+        <label  class="form-label">EMAIL</label>
+        <input type="email" class="form-control" name="email" value="{{values.email}}" placeholder="name@example.com">
+      </div>
+      <div class="mb-3" >
+        <label for="exampleFormControlInput1" class="form-label">PASSWORD</label>
+        <input type="password" class="form-control" name="password"  placeholder="*****">
+      </div>
+      <button class="btn btn-primary" type="submit">submit</button>
+      </form> 
+  </div>
+  
+</div>
+
+
+
+{% endblock %}

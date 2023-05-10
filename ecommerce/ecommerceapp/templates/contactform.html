@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container col-lg-10"  style="position:absolute; top:100px">
+  <div class="col-lg-6 mx-auto">
+      <form style="border:2px solid black ; padding: 20px;margin: 20px;" method="POST"> 
+        {% csrf_token %}
+      {{form.as_p}}
+      <button class="btn btn-primary" type="submit">submit</button>
+      </form> 
+  </div>
+  
+</div>
+
+
+
+{% endblock %}
